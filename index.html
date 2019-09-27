@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+    <title>aFrame</title>
+    <meta name="3dscene" content="church">
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-teleport-controls@0.2.0/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.2/dist/aframe-controller-cursor-component.min.js"></script>
+    <script src="https://rawgit.com/dmarcos/aframe-motion-capture/master/dist/aframe-motion-capture.min.js"></script>
+    
+
+      <style>
+
+      </style>
+  </head>
+    
+  <body>
+      
+    <a-scene>
+      <a-assets>
+        <img id="moon_normal" src="moon/textures/moon_NRM.jpg">
+          <img id="moomn" src="moon/textures/moons.jpg">
+        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+          <img id="skyTexture" src="moon/textures/galaxy.png">
+          <img id="treebark" src="moon/textures/tree2.jpg">
+          <img id="churchtop" src="moon/textures/churchtexture.jpg">
+          <img id="floortexture" src="moon/textures/floor3.jpg">
+          <a-asset-item id="cloud" src="moon/textures/scene.gltf"></a-asset-item>
+          <img id="mountaintexture" src="moon/textures/mount.jpg">
+          <img id="grass" src="moon/textures/grass.jpg">
+          <img id="cab" src="moon/textures/cab.jpg">
+          <img id="cab2" src="moon/textures/cab2.jpg">
+          
+      </a-assets>
+
+    
+    
+        
+     <a-sky id="bg" radius="5" src="#skyTexture" theta-length="100" material="transparent: true; opacity: 0.5" geometry="" scale="-2.73231 2.52271 3.26117" position="0.79491 2.06129 0.77302" rotation=""></a-sky>
+        <a-sky color="#6287f5"></a-sky>
+        <!-- tree-->
+    <a-octahedron position="-1.84948 1.22793 -4.18346" radius="1.25" color="#496631" material="" geometry="primitive: box" rotation="5.299286647164984 4.330415015598762 -110.35396317337708" scale="2.80779 1.16075 2.01518"></a-octahedron>
+       <a-octahedron data-brackets-id="268" position="-1.68407 0.84347 -4.91335" radius="1.25" color="#496631" material="" geometry="" rotation="0 20 -20.01"></a-octahedron>
+        <a-dodecahedron id="treemain" position="-1.70497 -0.83849 -4.30903" radius="0.5" height="1.5" material="color: #496631;roughness: 0" geometry="radius: 1" rotation="-9.282489238914467 90.39669725338024 -103.41372540095742" scale="-4.19979 1.95283 -1.3268"></a-dodecahedron>
+       <a-octahedron id="tree6" position="-2.24838 7.03174 -4.32403" radius="1.25" color="#9aae5d" geometry="" rotation="-1.7710125447493745 16.81459241370427 -4.455892772732413" material="color: #9aae5d;" scale="0.2249 1.2694 0.03178"></a-octahedron>
+        <a-octahedron id="tree5" position="-2.46149 2.60597 -3.16775" radius="1.25"  material="color: #496631;" geometry="" rotation="3.4463411377119018 29.51935856293514 6.253261376057805" scale="0.46764 1.49777 1"></a-octahedron>
+        <a-octahedron id="tree1" position="-2.30516 4.82454 -4.38268" radius="1.25"  material="color:#496631;" geometry="" rotation="90 20 -20.01" scale="0.29136 -0.76328 2.34525"></a-octahedron>
+        <a-octahedron id="tree2" position="-2.27205 2.75191 -3.89508" radius="1.25" material="color: #9aae5d" geometry="" rotation="1.28743616565896 -23.315944515053722 -0.10714310768946395" animation="" scale="-0.85815 -2.12002 0.86417"></a-octahedron>
+      <a-octahedron id="tree3" position="-0.93655 -0.10243 -4.14622" radius="1.25" color="#496631" geometry="" rotation="-11.79834691733391 11.653388595165813 -20.73419669019423" material=""></a-octahedron>
+        <a-dodecahedron id="tree4" position="-1.37681 3.1182 -4.08738" radius="1.25" color="#496631" geometry="primitive: octahedron" rotation="1.7864824052179067 -0.2939273489021123 -5.650509775580178" material="" scale="0.38482 2.41495 -0.79344"></a-dodecahedron>
+
+        
+       <a-circle id="floor" position="0.75965 0.03254 0.78148" rotation="-90 0 0" width="18" height="15"  material="src:#floortexture; color:white;" geometry="" scale="-13.18929 16.02386 63.13475"></a-circle>
+ 
+    
+        <!--grass-->
+        <a-cylinder id="grass1" color="#030d58" visible="" position="7.49161 0.02954 -5.57422" rotation="34.63300688447774 115.15133879200746 96.97539865707235" material="color: white; roughness: 1; src:#grass" geometry="height: 5; segmentsRadial: 6" scale="0.495 0.495 0.495"></a-cylinder>
+        <a-cylinder id="grass2" color="#030d58" visible="" position="5.56183 0.25664 -9.90627" rotation="19.058868097231702 108.34230835467275 85.59531093018394" material="color: white; roughness: 1; src: #grass" geometry="height: 5; segmentsRadial: 6" scale="0.49821 0.6485 0.49821"></a-cylinder>
+       <a-cylinder id="grass3" color="#030d58" visible="" position="6.40419 0.20415 -7.60585" rotation="-0.2595498811942629 117.12976205859418 95.73723686179464" material="color: white; roughness: 1; src:#grass" geometry="height: 5; segmentsRadial: 6" scale="0.49244 0.49244 0.50432"></a-cylinder>
+        <a-cylinder id="grass4" color="#030d58" visible="" position="4.192 0.10947 -4.70164" rotation="87.50669813474038 178.74965405152884 160.4665708089043" material="color: white; roughness: 1; src: #grass" geometry="height: 5; segmentsRadial: 6" scale="0.41045 0.3403 0.3403"></a-cylinder>
+        <a-cylinder id="grass5" color="#030d58" visible="" position="3.20936 0.09779 -7.57073" rotation="87.34340516312808 36.53866451108286 18.29053169396127" material="color: white; roughness: 1; src: #grass" geometry="height: 5; segmentsRadial: 6" scale="0.31424 0.9317 0.31424"></a-cylinder>
+        <a-cylinder id="grass6" color="#030d58" visible="" position="2.29587 0.15797 -10.22388" rotation="87.34340516312808 36.53866451108286 18.29053169396127" material="color: white; roughness: 1; src:  #grass" geometry="height: 5; segmentsRadial: 6" scale="0.36155 0.35551 0.24797"></a-cylinder>
+        <a-cylinder id="grass7" color="#030d58" visible="" position="-4.00808 -0.33532 -3.07271" rotation="52.397563322508915 130.0677220304433 99.29129406499115" material="color: white; roughness: 1; src: #grass" geometry="height: 5; segmentsRadial: 6" scale="1.59453 1.92433 1"></a-cylinder>
+        <a-cylinder id="grass8" color="#030d58" visible="" position="0.91519 -0.76074 -0.29476" rotation="-12.522565570379273 -3.537441427137703 -101.26398775362657" material="color: white; roughness: 1; src:#grass" geometry="height: 5; segmentsRadial: 6"></a-cylinder>
+        <a-cylinder id="grass9" color="#030d58" visible="" position="0.0745 0.00171 -5.57567" rotation="7.706855302304703 -161.21141594257435 -78.61668498549052" material="color: white; roughness: 1; src:#grass" geometry="height: 5; segmentsRadial: 6" scale="0.30942 0.30942 0.30942"></a-cylinder>
+        <a-cylinder id="grass10" color="#030d58" visible="" position="9.38258 -0.14432 -10.22044" rotation="1.594541543849081 126.32229692367312 91.88696047851552" material="color: white; roughness: 1; src: #grass" geometry="height: 5; segmentsRadial: 6" scale="0.495 0.495 0.41713"></a-cylinder>
+        
+        <!--mountain-->
+        <a-cylinder id="mountain6" color="#030d58" visible="" position="-0.21467 0.61916 -12.06116" rotation="31.943542994133658 173.63199502542034 67.47781249035218" material="color: white; roughness: 1; src: #mountaintexture
+        " geometry="height: 5; segmentsRadial: 6"></a-cylinder>
+       <a-cylinder id="mountain7" color="#030d58" visible="" position="-4.35568 0.67774 -10.29059" rotation="-25.43703427262803 -158.1472376542147 -75.86648756886257" material="color: white; roughness: 1; src: #mountaintexture" geometry="height: 5; segmentsRadial: 6" scale="1.81379 1.63876 1.81379"></a-cylinder>
+        <a-octahedron id="mountaintop1" position="8.75786 0.9737 -12.42437" radius="1.25" color="#36320f" geometry="" rotation="-1.7710125447493745 16.81459241370427 -4.455892772732413" material="color: #b5b3b3; src:#mountaintexture" scale="0.7835 0.91267 0.96188"></a-octahedron>
+        <a-cylinder id="mountain1" color="#030d58" visible="" position="3.68789 0.65575 -12.65378" rotation="29.741666187445905 -172.04662080629333 114.05125982535628" material="color: white; roughness: 1; src:#mountaintexture" geometry="height: 5; segmentsRadial: 24"></a-cylinder>
+        <a-cone id="mountain2" geometry="radiusTop: 0.5" color="white" material="color: #b0caf7; src:#mountaintexture" position="6.19382 0.88688 -12.9205" scale="2.31233 1.87504 2.01155" shadow="" rotation="0 -114.61161254899423 0"></a-cone>
+       <a-cone id="mountain3" geometry="radiusTop: 0.5;openEnded: true; thetaLength: 180" color="white" material="side:double;color: #b0caf7; src:#mountaintexture" position="8.58236 0.44219 -12.01737" scale="1.71012 1.38671 1.48769" shadow="" rotation="0 -114.61161254899423 0"></a-cone>
+<a-cone id="mountain4" geometry="radiusTop: 0.5" color="white" material="color: #b0caf7; src: #mountaintexture" position="1.52184 0.72725 -13.20593" scale="2.33371 1.89238 2.03015" shadow="" rotation="0 -114.61161254899423 0"></a-cone>
+        <a-octahedron id="mountain5" geometry="" color="white" material="color: #b0caf7; src:#mountaintexture" position="6.29146 1.78021 -13.33903" scale="1.4261 1.79314 1.49511" shadow="" rotation="0 -152.52652168398131 0"></a-octahedron>
+        
+        <!--cloud-->
+        <a-entity id="cloud1" gltf-model="moon/textures/scene.gltf" position="0.84927 4.39275 -8.84435" rotation="" scale="0.75029 0.41146 0.63074" material="color: black" animation="property:position;to: -2.243 4.39275 -8.84435; dur:15000; dir: alternate; loop:true;"></a-entity>
+        <a-entity id="cloud2" gltf-model="moon/textures/scene.gltf" rotation="-0.5254022981349649 7.636381493503612 -3.704745103315903" scale="1.41558 0.67952 -3.91916" position="-8.78115 5.31465 -7.84735" material="color: black" visible=""></a-entity>
+       <a-entity id="cloud3" gltf-model="moon/textures/scene.gltf" material="color: black" position="-1.8808 8.44187 -8.87757" scale="1.13434 1.12476 1.25584" rotation="-71.92110019159172 169.67171074547608 -156.67989274088464"></a-entity>
+        <a-entity id="cloud4" gltf-model="moon/textures/scene.gltf" position="5.12684 3.52695 -13.50302" rotation="0 -6.218 0" scale="0.97178 0.63074 0.63074" material="color: black" animation="property: position;to: 8.234 3.52695 -10.233; dur: 17000; dir: alternate; loop:true"></a-entity>
+        <a-entity id="cloud5" gltf-model="moon/textures/scene.gltf" rotation="0.99522769014224 -35.48270329465675 -4.434120376517441" scale="1.04747 0.63939 -1.09084" position="9.38016 5.64781 -10.07353" material="color: black"></a-entity>
+
+        
+        <!--church-->
+        <a-cylinder geometry="radius: 0.5; height: 2" color="white" material="color: #82bcd1; src:#churchtop" position="1.09343 1.0208 -9.25271" scale="0.5268 0.65147 0.64196"></a-cylinder>
+       <a-cone id="prism" geometry="radiusTop: 0.5" color="white" material="color: #b0caf7; src:#churchtop" position="1.08259 0.73156 -9.24266" scale="0.57763 0.68217 0.72385" shadow=""></a-cone>
+        <a-cone geometry="radiusBottom: 0.5; radiusTop: 0; height: 2" color="white" material="color: #b0caf7; src:#churchtop" position="1.09096 2.43941 -9.27382" scale="0.64686 0.76393 0.8629" shadow=""></a-cone>
+        <a-box id="churchbottom" position="1.08844 0.10237 -9.24963" rotation="0 42.34158106016783 0" material="color: #82bcd1; src: #churchtop" visible="" geometry="" scale="0.73521 0.58277 0.82175" shadow=""></a-box>
+        <a-box id="church3" color="#030d58" visible="" position="1.36374 0.1805 -8.97097" rotation="-86.80253300452459 38.89122921789002 2.1571860986675495" material="color: #187ab8; roughness: 1" geometry="height: 9" scale="0.24715 0.01185 0.28857"></a-box>
+        <a-box id="church4" color="#030d58" visible="" position="1.2649 1.25663 -9.05732" rotation="-86.80253300452459 55.3007404704368 2.1571860986675495" material="color: #187ab8; roughness: 1" geometry="height: 9" scale="0.15006 0.01185 0.28857"></a-box>
+        <!--cabin-->
+        
+       <a-cylinder id="cab1" color="#030d58" visible="" position="2.43957 0.7434 -5.88727" rotation="-88.27216974903516 22.437027257323038 15.52658329025018" material="color: white; roughness: 1; src:#cab" geometry="height: 10; segmentsRadial: 3" scale="0.68458 0.10285 0.43656"></a-cylinder>
+        <a-box id="cab1" color="#030d58" visible="" position="2.4185 0.23539 -5.91791" rotation="-86.80253300452459 36.927129896181555 2.1571860986675495" material="color: gray; roughness: 1; src:#cab" geometry="height: 10" scale="0.88367 0.10394 0.65034"></a-box>
+       <a-box id="cab1" color="#030d58" visible="" position="2.69324 0.15388 -5.58942" rotation="-86.80253300452459 36.927129896181555 2.1571860986675495" material="color: #3b0b03; roughness: 1" geometry="height: 9" scale="0.35505 0.024 0.58473"></a-box>
+        <a-cylinder id="cab2" color="#030d58" visible="" position="-0.11777 0.73408 -6.92917" rotation="-87.96850211761581 54.08435107137406 -139.36797296100684" material="color: white; roughness: 1; src:#cab2" geometry="height: 10; segmentsRadial: 3" scale="0.68458 0.21125 0.43656"></a-cylinder>
+        <a-box id="cab2" color="#030d58" visible="" position="-0.09843 0.28841 -6.91478" rotation="-86.6930980656546 19.316699105040573 75.46312528109047" material="color: gray; roughness: 1; src:#cab2" geometry="height: 10" scale="0.74669 0.20518 0.65683"></a-box>
+        
+        <!-- moon -->
+       <a-sphere id="moon" position="7.8578 8.53884 -7.17887" radius="1.25" material="normalTextureRepeat: NaN 1; color: white; src: #moomn" geometry="" normal-map="#moon_normal" normal-texture-repeat="#moomn" rotation="0 79.40668235306957 0" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000" shadow=""></a-sphere>
+    <!--star--> 
+       <a-circle id="star1" material="src: moon/textures/star3.jpg; color:white" geometry="" position="2.86538 4.83131 -8.56273" animation="property:rotation; from: 0 0 0; to: 0 0 360; loop:true; dur: 20000; easing:linear;"></a-circle>
+        <a-circle id="star2" material="src: moon/textures/star2.jpg; color:white" geometry="" position="5.02813 7.77961 -10.48863" scale="0.72155 0.72155 0.72155" animation="property:rotation; from: 0 0 360; to: 0 0 0; loop:true; dur: 21000; easing:linear;"></a-circle>
+        <a-circle id="star4" material="src: moon/textures/star.jpg; color: white" geometry="" position="-6.11099 6.69858 -7.95637" scale="1.29817 1.29817 1.29817" animation="property: rotation; from: 0 0 0; to: 0 0 360; loop: true; dur: 23000; easing: linear" rotation="20.13660170987278 25.386613986656513 83.30290679186552"></a-circle>
+    <!--light-->
+        <!-- Red directional light shining from the top left. -->
+<a-light color="#fcd072" position="-1 1 0"></a-light>
+
+<!-- Blue point light, 5 meters in the air. -->
+<a-light type="spot" color="#000557" position="-3.25008 4.26985 9.01154"></a-light>
+
+<!-- Dim ambient lighting. -->
+        <a-light id="d1" type="directional" color="#faf5d7" light="decay: 0.5"></a-light>
+        <a-light id="d2" type="directional" color="#faf5d7" light="decay: 0.5" rotation="-42.486539382335934 177.94923201173108 -177.35851252495118" position="-2.3567 8.49827 -5.00427"></a-light>
+        <a-light id="d3" type="directional" color="#faf5d7" light="decay: 0.5; angle: 30" rotation="-42.486539382335934 177.94923201173108 -177.35851252495118" position="2.21697 -0.37922 1.50193"></a-light>
+       <a-light type="directional"id="light1" light target="#prism"light="target:#prism" color="#4f56d1" intensity="1" angle="360"></a-light>
+        <a-light type="spot" id="treelight " color="white" intensity="1" angle="360" light="intensity: 0.7; angle: 7; target: #treemxain; decay: 0.9; distance: 18" visible="" scale="0.41525 1 1" position="-3.9836 13.61504 -4.2436"></a-light>
+        <a-light type="spot" id="starlight1 " color="white" intensity="1" angle="360" light="intensity: 0.6; angle: 3; target: #churchtop; decay: 0.6; distance: 19.99; castShadow: true" visible="" scale="0.41525 1 1" rotation="" position="2.85099 4.82822 8.2348"></a-light>
+        <a-light type="spot" id="starlight2 " color="white" intensity="1" angle="360" light="intensity: 0.8; angle: 2; target: #star2; decay: 0.9; distance: 19.99; castShadow: true" visible="" scale="0.41525 1 1" rotation="" position="5.02348 4.6532 4.89527"></a-light>
+        <a-light type="spot" id="starlight4" color="white" intensity="0.5" angle="360" light="angle: 3; target: #star4; decay: 0.7; distance: 19.99; castShadow: true" visible="" scale="0.41525 1 0.93659" rotation="" position="-0.00772 3.75038 7.33193"></a-light>
+        <a-light type="spot" id="moonlight " color="white" intensity="1" angle="360" light="color: #ffa400; intensity: 0.4; angle: 10; target: #moon; decay: 0.6; distance: 100" visible="" scale="0.41525 1 0.93659" rotation="" position="-7.54553 9.72934 4.83203"></a-light>
+      
+        
+    <!-- Hands. -->
+      <a-entity id="teleHand"
+        hand-controls="left"
+        teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #ground"
+      ></a-entity>
+
+      <a-entity id="blockHand"
+        hand-controls="right"
+        controller-cursor
+        intersection-spawn="event: click; mixin: voxel"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
